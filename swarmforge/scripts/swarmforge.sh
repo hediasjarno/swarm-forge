@@ -148,7 +148,7 @@ ensure_runtime_git_excludes() {
 }
 
 initialize_git_repo() {
-  if [[ -d "$WORKING_DIR/.git" ]]; then
+  if [[ -e "$WORKING_DIR/.git" ]]; then
     return
   fi
 
