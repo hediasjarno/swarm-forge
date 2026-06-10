@@ -445,7 +445,7 @@ prepare_worktrees() {
   for (( i = 1; i <= ${#ROLES[@]}; i++ )); do
     worktree_name="${WORKTREE_NAMES[$i]}"
     worktree_path="${WORKTREE_PATHS[$i]}"
-    branch_name="swarmforge-${worktree_name}"
+    branch_name="swarmforge-${WORKING_DIR:t}-${worktree_name}"
 
     if [[ "$worktree_name" == "none" || "$worktree_name" == "master" ]]; then
       continue
